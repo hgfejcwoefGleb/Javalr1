@@ -156,9 +156,9 @@ public class Main{
         int currentDayAge = 0;
                if(currentDay > day)
                    currentDayAge = currentDay - day;
-            if(currentDay == day)
+               if(currentDay == day)
                 currentDayAge = 0;
-        if(currentDay < day)
+               if(currentDay < day)
             currentDayAge = currentDay - day + AmDayOfBornMonth;//(количество дней месаца рождения
         System.out.println(currentDayAge + " " + "дней");
         System.out.println(currentMonthAge + " " + "месяцев");
