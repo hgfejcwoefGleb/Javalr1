@@ -55,6 +55,6 @@ public class Main{
         int currentmonth = 11;
         int currentyear = 2022;
         System.out.println(day);
-        System.out.println(month);
+        System.out.println(month+1);
     }
 }
