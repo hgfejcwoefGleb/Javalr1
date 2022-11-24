@@ -107,6 +107,6 @@ public class Main{
             currentDayAge = currentDay - day + 30;//(количество дней месаца рождения
         System.out.println(currentDayAge + " " + "дней");
         System.out.println(currentMonthAge + " " + "месяцев");
-        System.out.println(currentYearAge + " " + "лет");
+        System.out.println(currentYearAge + " " + "лет1");
     }
 }
