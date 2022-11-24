@@ -89,8 +89,24 @@ public class Main{
                 if(currentMonth < month)
                     currentYearAge = currentYear - (year + 1);
                 }
-        System.out.println(day);
-        System.out.println(month);
+        int currentMonthAge = 0;
+            if(currentMonth >= month && currentDay >= day )
+                currentMonthAge = currentMonth - month;
+            if(currentMonth >= month && currentDay < day)
+                currentMonthAge = currentMonth - (month+1);
+            if(currentMonth < month && currentDay >= day)
+                currentMonthAge =  currentMonth - month + 12;
+            if(currentMonth < month && currentDay < day)
+                currentMonthAge =  currentMonth - month + 12 - 1;
+        int currentDayAge = 0;
+        if(currentDay > day && currentMonth >= month)
+            currentDayAge = currentDay - day;
+        if(currentDay == day)
+            currentDayAge = 0;
+        if(currentDay < day)
+            currentDayAge = currentDay - day + 30;//(количество дней месаца рождения
+        System.out.println(currentDayAge + " " + "дней");
+        System.out.println(currentMonthAge + " " + "месяцев");
         System.out.println(currentYearAge + " " + "лет");
     }
 }
