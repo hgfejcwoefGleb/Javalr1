@@ -78,7 +78,17 @@ public class Main{
         int currentDay = 17;
         int currentMonth = 11;
         int currentYear = 2022;
-        int currentYearAge = currentYear - year;
+        int currentYearAge = 0;
+         if(currentMonth > month)
+          currentYearAge = currentYear - year;
+            else{
+                if(currentMonth == month && currentDay >= day)
+                    currentYearAge = currentYear - year;
+                if(currentMonth == month && currentDay <= day)
+                    currentYearAge = currentYear - (year + 1);
+                if(currentMonth < month)
+                    currentYearAge = currentYear - (year + 1);
+                }
         System.out.println(day);
         System.out.println(month);
         System.out.println(currentYearAge + " " + "лет");
