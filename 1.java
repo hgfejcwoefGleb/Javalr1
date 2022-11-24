@@ -139,20 +139,20 @@ public class Main{
                 currentYearAge = currentYear - (year + 1);
         }
         int currentMonthAge = 0;
-        if(currentMonth >= month && currentDay >= day )
+            if(currentMonth >= month && currentDay >= day )
             currentMonthAge = currentMonth - month;
-        if(currentMonth >= month && currentDay < day)
+            if(currentMonth >= month && currentDay < day)
             currentMonthAge = currentMonth - (month+1);
-        if(currentMonth < month && currentDay >= day)
+            if(currentMonth < month && currentDay >= day)
             currentMonthAge =  currentMonth - month + 12;
-        if(currentMonth < month && currentDay < day)
+            if(currentMonth < month && currentDay < day)
             currentMonthAge =  currentMonth - month + 12;
         int currentDayAge = 0;
-        if(currentDay > day)
+            if(currentDay > day)
             currentDayAge = currentDay - day;
-        if(currentDay == day)
+            if(currentDay == day)
             currentDayAge = 0;
-        if(currentDay < day)
+            if(currentDay < day)
             currentDayAge = currentDay - day + AmDayOfBornMonth;//(количество дней месаца рождения
         System.out.println(currentDayAge + " " + "дней");
         System.out.println(currentMonthAge + " " + "месяцев");
