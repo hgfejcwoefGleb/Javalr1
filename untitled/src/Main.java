@@ -108,9 +108,9 @@ public class Main{
             if(currentMonth < month && currentDay >= day)
                 currentMonthAge =  currentMonth - month + 12;
             if(currentMonth < month && currentDay < day)
-                currentMonthAge =  currentMonth - month + 12 - 1;
+                currentMonthAge =  currentMonth - month + 12;
         int currentDayAge = 0;
-        if(currentDay > day && currentMonth >= month)
+        if(currentDay > day)
             currentDayAge = currentDay - day;
         if(currentDay == day)
             currentDayAge = 0;
