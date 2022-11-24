@@ -51,6 +51,17 @@ public class Main{
             }
             diapM = (month >= 1 && month <= 12);
         }
+        int AmDayOfBornMonth;
+        switch(month) {
+            case 1, 3, 5, 7, 8, 10, 12: AmDayOfBornMonth = 31;
+            break;
+            case 4, 6, 9, 11: AmDayOfBornMonth = 30;
+            break;
+            case 2: AmDayOfBornMonth = 28;
+            break;
+            default: AmDayOfBornMonth = 0;
+            break;
+        }
         System.out.println("Введите год, в который вы родились: ");
         while(!sc.hasNextInt())
         {
@@ -104,9 +115,10 @@ public class Main{
         if(currentDay == day)
             currentDayAge = 0;
         if(currentDay < day)
-            currentDayAge = currentDay - day + 30;//(количество дней месаца рождения
+            currentDayAge = currentDay - day + AmDayOfBornMonth;//(количество дней месаца рождения
         System.out.println(currentDayAge + " " + "дней");
         System.out.println(currentMonthAge + " " + "месяцев");
-        System.out.println(currentYearAge + " " + "лет1");
+        System.out.println(currentYearAge + " " + "лет");
+        sc.close();
     }
 }
