@@ -3,30 +3,6 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите день, в который вы родились: ");
-        while(!sc.hasNextInt())
-        {
-            System.out.println("Введите,пожалуйста, целое число: ");
-            sc.next();
-        }
-        int day = sc.nextInt();
-        boolean diapDay  = (day >= 1 && day <= 31);
-        while (diapDay  == false)
-        {
-            System.out.println("Введите, пожалуйста, число от 1 до 31: ");
-                 if(sc.hasNextInt())
-                  day = sc.nextInt();
-                 else  {
-                        while(!sc.hasNextInt())
-                            {
-                            System.out.println("Введите, пожалуста, число целое: ");
-                            sc.next();
-                            }
-                        day = sc.nextInt();
-                        diapDay = (day >= 1 && day <= 31);
-                       }
-                 diapDay = (day >= 1 && day <= 31);
-        }
         System.out.println("Введите месяц, в который вы родились: ");
         while(!sc.hasNextInt())
         {
@@ -61,6 +37,68 @@ public class Main{
             break;
             default: AmDayOfBornMonth = 0;
             break;
+        }
+            System.out.println("Введите день, в который вы родились: ");
+        while(!sc.hasNextInt())
+        {
+            System.out.println("Введите,пожалуйста, целое число: ");
+            sc.next();
+        }
+        int day = sc.nextInt();
+        boolean diapDay = false;
+        if(AmDayOfBornMonth == 31)
+            diapDay  = (day >= 1 && day <= 31);
+        while (diapDay  == false)
+        {
+            System.out.println("Введите, пожалуйста, число от 1 до 31: ");
+            if(sc.hasNextInt())
+                day = sc.nextInt();
+            else  {
+                while(!sc.hasNextInt())
+                {
+                    System.out.println("Введите, пожалуста, число целое: ");
+                    sc.next();
+                }
+                day = sc.nextInt();
+                diapDay = (day >= 1 && day <= 31);
+            }
+            diapDay = (day >= 1 && day <= 31);
+        }
+        if(AmDayOfBornMonth == 30)
+            diapDay  = (day >= 1 && day <= 30);
+        while (diapDay  == false)
+        {
+            System.out.println("Введите, пожалуйста, число от 1 до 30: ");
+            if(sc.hasNextInt())
+                day = sc.nextInt();
+            else  {
+                while(!sc.hasNextInt())
+                {
+                    System.out.println("Введите, пожалуста, число целое: ");
+                    sc.next();
+                }
+                day = sc.nextInt();
+                diapDay = (day >= 1 && day <= 30);
+            }
+            diapDay = (day >= 1 && day <= 30);
+        }
+        if(AmDayOfBornMonth == 28)
+            diapDay  = (day >= 1 && day <= 28);
+        while (diapDay  == false)
+        {
+            System.out.println("Введите, пожалуйста, число от 1 до 28: ");
+            if(sc.hasNextInt())
+                day = sc.nextInt();
+            else  {
+                while(!sc.hasNextInt())
+                {
+                    System.out.println("Введите, пожалуста, число целое: ");
+                    sc.next();
+                }
+                day = sc.nextInt();
+                diapDay = (day >= 1 && day <= 28);
+            }
+            diapDay = (day >= 1 && day <= 28);
         }
         System.out.println("Введите год, в который вы родились: ");
         while(!sc.hasNextInt())
