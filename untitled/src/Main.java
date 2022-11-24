@@ -27,7 +27,34 @@ public class Main{
                        }
                  diap = (day>=1&&day<=31);
         }
-        int c = day;
+        System.out.println("Введите месяц, в который вы родились: ");
+        while(!sc.hasNextInt())
+        {
+            System.out.println("Введите,пожалуйста, целое число: ");
+            sc.next();
+        }
+        int month = sc.nextInt();
+        boolean diapm = (month>=1&&month<=12);
+        while (diapm == false)
+        {
+            System.out.println("Введите, пожалуйста, число от 1 до 12: ");
+            if(sc.hasNextInt())
+                month = sc.nextInt();
+            else  {
+                while(!sc.hasNextInt())
+                {
+                    System.out.println("Введите, пожалуста, число целое: ");
+                    sc.next();
+                }
+                month = sc.nextInt();
+                diapm = (day >= 1 && day <= 12);
+            }
+            diapm = (month>=1&&month<=12);
+        }
+        int currentday = 17;
+        int currentmonth = 11;
+        int currentyear = 2022;
         System.out.println(day);
+        System.out.println(month);
     }
 }
